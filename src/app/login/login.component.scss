@@ -1,0 +1,48 @@
+.c-login {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 85px;
+}
+
+.c-button {
+  background: blue;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+
+  &--modal {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    background: blue;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+  }
+}
+
+.c-modal {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 15px;
+
+  &__content {
+    border: 1px solid #000;
+    width: 200px;
+    height: 130px;
+  }
+
+  &__input {
+    display: flex;
+    width: 150px;
+    height: 22px;
+    margin: 0 auto;
+    margin-top: 10px;
+
+    &:first-child {
+      margin-top: 20px;
+    }
+  }
+}

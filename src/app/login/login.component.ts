@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  isShow: boolean;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+    this.isShow = false;
+  }
+
+  toggleShow() {
+    this.isShow = !this.isShow;
   }
 
 }
