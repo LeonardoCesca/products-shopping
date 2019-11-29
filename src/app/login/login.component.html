@@ -3,8 +3,8 @@
 </div>
 <div class="c-modal" *ngIf="isShow">
   <div class="c-modal__content">
-    <input class="c-modal__input" type="text" name="email" ngModel placeholder="E-mail">
-    <input class="c-modal__input" type="text" placeholder="Senha">
+    <input class="c-modal__input" type="text" name="email" [(ngModel)]="data.email" placeholder="E-mail" />
+    <input class="c-modal__input" type="text" name="password" [(ngModel)]="data.password" placeholder="Senha">
     <button class="c-button--modal">Login</button>
   </div>
 </div>
