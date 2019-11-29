@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
       })
       if(user[0].email === this.email && user[0].password === this.password) {
         this.returnClient = true;
-        alert("campeão")
+
       } else {
         this.returnClient = false;
       }
@@ -50,5 +50,4 @@ export class LoginComponent implements OnInit {
       return this.returnClient;
     })
   }
-
 }

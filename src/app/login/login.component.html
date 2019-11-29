@@ -1,13 +1,15 @@
-<div class="c-login">
-  <button class="c-button" (click)="toggleShow()">Login</button>
+<div class="c-login-content" *ngIf="!this.returnClient">
+  <div class="c-login">
+    <button class="c-button" (click)="toggleShow()">Login</button>
+  </div>
+  <div class="c-modal" *ngIf="isShow">
+    <form [formGroup]="verifyFormData" novalidate>
+      <div class="c-modal__content">
+        <input class="c-modal__input" type="email" name="email" [(ngModel)]="email" formControlName="email" placeholder="E-mail" required />
+        <input class="c-modal__input" type="password" name="password" [(ngModel)]="password" formControlName="password" placeholder="Senha" required />
+        <button class="c-button--modal" (click)="getToVerifyClient()">Login</button>
+      </div>
+    </form>
+  </div>
 </div>
-<div class="c-modal" *ngIf="isShow">
-  <form [formGroup]="verifyFormData" novalidate>
-    <div class="c-modal__content">
-      <input class="c-modal__input" type="text" name="email" [(ngModel)]="email"  formControlName="email" placeholder="E-mail" />
-      <input class="c-modal__input" type="text" name="password" [(ngModel)]="password" formControlName="password" placeholder="Senha">
-      <button class="c-button--modal" (click)="getToVerifyClient()">Login</button>
-    </div>
-    <app-logout [logout]="returnClient"></app-logout>
-  </form>
-</div>
+<app-logout [logout]="returnClient"></app-logout>

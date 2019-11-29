@@ -1,0 +1,12 @@
+.c-logout {
+  display: flex;
+  justify-content: flex-end;
+
+  &__btn {
+    background: red;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+  }
+}
