@@ -26,6 +26,7 @@
 .c-modal {
   display: flex;
   justify-content: flex-end;
+  position: absolute;
   padding: 15px 15px;
 
   &__content {
