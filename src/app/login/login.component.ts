@@ -40,6 +40,8 @@ export class LoginComponent implements OnInit {
       if(user[0].email === this.email && user[0].password === this.password) {
         alert("campeão")
       }
+      this.email = "";
+      this.password = "";
     })
   }
 
