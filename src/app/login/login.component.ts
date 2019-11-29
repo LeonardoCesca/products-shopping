@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from '../shared/users/users.service';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   isShow: boolean;
-  data = [];
+  email: string = "";
+  password: string = "";
+  verifyFormData: FormGroup;
 
-  constructor() {}
+  constructor(
+    public usersService: UsersService,
+    public fb: FormBuilder,
+  ) {
+    this.verifyFormData = new FormGroup({
+      email: new FormControl(),
+      password: new FormControl(),
+    });
+  }
 
   ngOnInit() {
     this.isShow = false;
@@ -17,6 +29,18 @@ export class LoginComponent implements OnInit {
 
   toggleShow() {
     this.isShow = !this.isShow;
+  }
+
+  getToVerifyClient() {
+    this.usersService.getUsers().subscribe((user) => {
+      this.verifyFormData = this.fb.group({
+        email: [user.email],
+        password: [user.password]
+      })
+      if(user[0].email === this.email && user[0].password === this.password) {
+        alert("campeão")
+      }
+    })
   }
 
 }
