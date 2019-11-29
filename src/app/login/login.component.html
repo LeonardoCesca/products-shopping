@@ -8,5 +8,6 @@
       <input class="c-modal__input" type="text" name="password" [(ngModel)]="password" formControlName="password" placeholder="Senha">
       <button class="c-button--modal" (click)="getToVerifyClient()">Login</button>
     </div>
+    <app-logout [logout]="returnClient"></app-logout>
   </form>
 </div>

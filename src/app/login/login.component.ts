@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   email: string = "";
   password: string = "";
   verifyFormData: FormGroup;
+  returnClient: boolean = false;
 
   constructor(
     public usersService: UsersService,
@@ -32,16 +33,21 @@ export class LoginComponent implements OnInit {
   }
 
   getToVerifyClient() {
-    this.usersService.getUsers().subscribe((user) => {
+    return this.usersService.getUsers().subscribe((user) => {
       this.verifyFormData = this.fb.group({
         email: [user.email],
         password: [user.password]
       })
       if(user[0].email === this.email && user[0].password === this.password) {
+        this.returnClient = true;
         alert("campeão")
+      } else {
+        this.returnClient = false;
       }
       this.email = "";
       this.password = "";
+
+      return this.returnClient;
     })
   }
 
