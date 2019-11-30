@@ -1,5 +1,16 @@
 .c-menu {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 85px;
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    list-style: none;
+    padding-left: 40px;
+  }
 }
