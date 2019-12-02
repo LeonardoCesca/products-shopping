@@ -6,6 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./logout.component.scss'],
 })
 export class LogoutComponent implements OnInit {
+  title: string = 'Logout'
   initialLogout: boolean = false;
 
   @Input() logout;

@@ -1,6 +1,7 @@
 .c-logout {
   display: flex;
   justify-content: flex-end;
+  padding: 15px 85px;
 
   &__btn {
     background: red;
@@ -8,5 +9,8 @@
     outline: none;
     cursor: pointer;
     color: #fff;
+    width: 83px;
+    height: 37px;
+    border-radius: 6px;
   }
 }
