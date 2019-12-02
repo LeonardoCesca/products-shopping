@@ -1,1 +1,12 @@
-<p>products-list works!</p>
+<div class="c-products-list">
+  <div class="c-info-box" *ngFor="let product of products">
+    <div class="c-infos">
+      <h4>{{product.title}}</h4>
+      <span>{{product.subtitle}}</span>
+      <img src="../../assets/img/products/{{product.image}}" alt="">
+    </div>
+        <div class="c-price">
+          <span>{{product.price}}</span>
+        </div>
+  </div>
+</div>
