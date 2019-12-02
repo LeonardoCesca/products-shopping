@@ -13,4 +13,14 @@
     list-style: none;
     padding-left: 40px;
   }
+
+  &__link {
+    text-decoration: none;
+    color: #89aec7;
+  }
+
+  &__img {
+    width: 150px;
+    height: auto;
+  }
 }
