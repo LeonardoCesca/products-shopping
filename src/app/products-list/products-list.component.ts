@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductsListComponent implements OnInit {
   products: {};
+  title: string = 'Add to cart';
 
   constructor(
     public productsService: ProductsService,

@@ -6,13 +6,26 @@
   background: #FAFAFA;
 
   & img {
-    width: 145px;
+    width: 153px;
+  }
+
+  &__btn {
+    margin-top: 10px;
+    background: #3877A1;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    height: 28px;
+    border-radius: 6px;
+    font-size: 11px;
   }
 }
 
 .c-info-box {
   display: flex;
   justify-content: space-between;
+  position: relative;
   width: 150px;
   padding: 0 25px 25px 25px;
   margin-left: 26px;
@@ -32,16 +45,18 @@
 }
 
 .c-price {
- & span {
-  background: #000;
-  height: 25px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-
-  &::after {
-    padding-right: 10px;
-  }
+  & span {
+    background: #333333;
+    height: 25px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    font-size: 17px;
  }
 }
