@@ -1,0 +1,9 @@
+.c-cart {
+  display: flex;
+  align-items: center;
+  &__img {
+    height: 27px;
+    width: auto;
+    padding-right: 10px;
+  }
+}

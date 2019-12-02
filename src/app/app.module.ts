@@ -14,6 +14,7 @@ import { ProductsComponent } from './products/products.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
 import { MainImageComponent } from './main-image/main-image.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MainImageComponent } from './main-image/main-image.component';
     ProductsComponent,
     FooterComponent,
     MenuComponent,
-    MainImageComponent
+    MainImageComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
