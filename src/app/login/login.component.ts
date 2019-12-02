@@ -8,6 +8,7 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  title: string = "Login";
   isShow: boolean;
   email: string = "";
   password: string = "";

@@ -1,13 +1,13 @@
 <div class="c-login-content" *ngIf="!this.returnClient">
   <div class="c-login">
-    <button class="c-button" (click)="toggleShow()">Login</button>
+    <button class="c-button" (click)="toggleShow()">{{title}}</button>
   </div>
   <div class="c-modal" *ngIf="isShow">
     <form [formGroup]="verifyFormData" novalidate>
       <div class="c-modal__content">
         <input class="c-modal__input" type="email" name="email" [(ngModel)]="email" formControlName="email" placeholder="E-mail" required />
         <input class="c-modal__input" type="password" name="password" [(ngModel)]="password" formControlName="password" placeholder="Senha" required />
-        <button class="c-button--modal" (click)="getToVerifyClient()">Login</button>
+        <button class="c-button--modal" (click)="getToVerifyClient()">{{title}}</button>
       </div>
     </form>
   </div>
