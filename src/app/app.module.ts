@@ -13,6 +13,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { ProductsComponent } from './products/products.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
+import { MainImageComponent } from './main-image/main-image.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MenuComponent } from './menu/menu.component';
     LogoutComponent,
     ProductsComponent,
     FooterComponent,
-    MenuComponent
+    MenuComponent,
+    MainImageComponent
   ],
   imports: [
     BrowserModule,
