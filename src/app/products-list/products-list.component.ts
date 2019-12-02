@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../shared/products/products.service';
 import { HttpClient } from '@angular/common/http';
+import { Products } from '../shared/products/products';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductsListComponent implements OnInit {
   products: {};
-  title: string = 'Add to cart';
+  message: string = 'Add to cart';
 
   constructor(
     public productsService: ProductsService,
@@ -28,7 +29,6 @@ export class ProductsListComponent implements OnInit {
     this.productsService.getProducts().subscribe(products => {
       this.products = products;
       console.log(this.products);
-    })
+    });
   }
-
 }

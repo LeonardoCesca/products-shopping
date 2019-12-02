@@ -1,5 +1,5 @@
 <div class="c-products-list">
-  <div class="c-info-box" *ngFor="let product of products">
+  <div class="c-info-box" *ngFor="let product of products; let i = index">
     <div class="c-infos">
       <h4>{{product.title}}</h4>
       <span>{{product.subtitle}}</span>
@@ -7,7 +7,7 @@
       <div class="c-price">
         <span>{{product.price}}</span>
       </div>
-      <button class="c-products-list__btn">{{title}}</button>
+      <app-button-buy [childMessage]="message"></app-button-buy>
     </div>
   </div>
 </div>
