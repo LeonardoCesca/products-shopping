@@ -1,19 +1,21 @@
 .c-footer {
-  position: fixed;
   bottom: 0;
   background: #424242;
-  height: 80px;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   opacity: 100%;
+  padding: 15px 85px;
 
   &__copyright {
     display: flex;
     justify-content: flex-end;
     align-content: center;
-    padding-right: 90px;
     color: #367BA4;
+  }
+
+  &__img {
+    width: 150px;
+    height: auto;
   }
 }
