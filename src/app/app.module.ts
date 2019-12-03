@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import {UsersService} from './shared/users/users.service';
+import {UsersService} from './services/users/users.service';
 
 import { AppRoutingModule } from './app-routing.module';
 
