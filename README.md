@@ -10,3 +10,9 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Please, navigate to folder called `backend` with command (cd..) and RUN `node server.js`. Already, the server will be running at `http://localhost:8081/`.
 
+## Login
+
+To effect login:
+
+- Email: admin@admin.com
+- Password: admin
