@@ -1,4 +1,5 @@
 <app-menu></app-menu>
 <app-main-image></app-main-image>
-<app-products></app-products>
+<app-products *ngIf="router.url !== '/cart-list'"></app-products>
+<app-cart-list *ngIf="router.url === '/cart-list'"></app-cart-list>
 <app-footer></app-footer>

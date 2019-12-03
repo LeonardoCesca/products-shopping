@@ -17,6 +17,7 @@ import { MainImageComponent } from './components/main-image/main-image.component
 import { CartComponent } from './components/cart/cart.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { ButtonBuyComponent } from './components/button-buy/button-buy.component';
+import { CartListComponent } from './components/cart-list/cart-list.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ButtonBuyComponent } from './components/button-buy/button-buy.component
     MainImageComponent,
     CartComponent,
     ProductsListComponent,
-    ButtonBuyComponent
+    ButtonBuyComponent,
+    CartListComponent
   ],
   imports: [
     BrowserModule,
