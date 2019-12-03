@@ -11,6 +11,7 @@ export class LogoutComponent implements OnInit {
   showLogin: boolean = false;
 
   @Input() logout;
+  @Input() receiveName;
 
   constructor() { }
 

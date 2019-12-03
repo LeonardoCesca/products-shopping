@@ -16,6 +16,7 @@ app.get('/login', (req, res) => {
   let users = [
     {
       id: 1,
+      name: 'Admin',
       email: 'admin@admin.com',
       password: 'admin',
     },

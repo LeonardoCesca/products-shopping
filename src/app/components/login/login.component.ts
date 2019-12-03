@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { UsersService } from '../../services/users/users.service';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 
@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   password: string = "";
   verifyFormData: FormGroup;
   returnClient: boolean = false;
+  nameReceive: string = "";
 
   constructor(
     public usersService: UsersService,
@@ -40,6 +41,11 @@ export class LoginComponent implements OnInit {
         password: [user.password]
       })
       if(user[0].email === this.email && user[0].password === this.password) {
+        if(!!user[0].name) {
+          this.nameReceive = user[0].name;
+        } else {
+          this.nameReceive = this.email;
+        }
         this.returnClient = true;
 
       } else {

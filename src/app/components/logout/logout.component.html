@@ -1,5 +1,6 @@
 <div *ngIf="logout && !this.showLogin">
   <div class="c-logout">
+    <p class="c-logout__user">Welcome, {{ receiveName }}</p>
     <button class="c-logout__btn" (click)="changeShowLogin()">{{title}}</button>
   </div>
 </div>

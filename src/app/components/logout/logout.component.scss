@@ -13,4 +13,11 @@
     height: 37px;
     border-radius: 6px;
   }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    padding-right: 60px;
+    color: #3877A1;
+  }
 }
