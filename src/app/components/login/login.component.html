@@ -9,10 +9,11 @@
         <input class="c-modal__input" type="password" name="password" [(ngModel)]="password" formControlName="password" placeholder="Senha" required />
         <button class="c-button--modal" (click)="getToVerifyClient()">{{title}}</button>
       </div>
+      <div class="c-error" *ngIf="error">
+        {{error}}
+      </div>
     </form>
   </div>
 </div>
-<div class="c-error" *ngIf="error">
-  {{error}}
-</div>
 <app-logout [logout]="returnClient" [receiveName]="nameReceive"></app-logout>
+
