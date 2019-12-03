@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-logout',
@@ -8,12 +8,17 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class LogoutComponent implements OnInit {
   title: string = 'Logout'
   initialLogout: boolean = false;
+  showLogin: boolean = false;
 
   @Input() logout;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  changeShowLogin() {
+    this.showLogin = true;
   }
 
 }

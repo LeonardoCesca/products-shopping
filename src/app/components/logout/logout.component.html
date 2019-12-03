@@ -1,6 +1,9 @@
-<div *ngIf="logout">
+<div *ngIf="logout && this.showLogin === false">
   <div class="c-logout">
-    <button class="c-logout__btn">{{title}}</button>
+    <button class="c-logout__btn" (click)="changeShowLogin()">{{title}}</button>
   </div>
+</div>
+<div *ngIf="this.showLogin === true">
+<app-login></app-login>
 </div>
 
