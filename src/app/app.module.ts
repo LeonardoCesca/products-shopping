@@ -8,15 +8,15 @@ import {UsersService} from './shared/users/users.service';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { LogoutComponent } from './logout/logout.component';
-import { ProductsComponent } from './products/products.component';
-import { FooterComponent } from './footer/footer.component';
-import { MenuComponent } from './menu/menu.component';
-import { MainImageComponent } from './main-image/main-image.component';
-import { CartComponent } from './cart/cart.component';
-import { ProductsListComponent } from './products-list/products-list.component';
-import { ButtonBuyComponent } from './button-buy/button-buy.component';
+import { LoginComponent } from './components/login/login.component';
+import { LogoutComponent } from './components/logout/logout.component';
+import { ProductsComponent } from './components/products/products.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { MainImageComponent } from './components/main-image/main-image.component';
+import { CartComponent } from './components/cart/cart.component';
+import { ProductsListComponent } from './components/products-list/products-list.component';
+import { ButtonBuyComponent } from './components/button-buy/button-buy.component';
 
 @NgModule({
   declarations: [
