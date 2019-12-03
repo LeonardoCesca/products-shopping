@@ -12,4 +12,7 @@
     </form>
   </div>
 </div>
+<div class="c-error" *ngIf="error">
+  {{error}}
+</div>
 <app-logout [logout]="returnClient" [receiveName]="nameReceive"></app-logout>

@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   verifyFormData: FormGroup;
   returnClient: boolean = false;
   nameReceive: string = "";
+  error: string;
 
   constructor(
     public usersService: UsersService,
@@ -47,9 +48,11 @@ export class LoginComponent implements OnInit {
           this.nameReceive = this.email;
         }
         this.returnClient = true;
+        this.error = "";
 
       } else {
         this.returnClient = false;
+        this.error = 'Email or Password Wrongs';
       }
       this.email = "";
       this.password = "";
