@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart-list.component.scss']
 })
 export class CartListComponent implements OnInit {
+  title: string = 'Cart';
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }

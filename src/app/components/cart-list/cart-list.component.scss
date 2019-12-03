@@ -1,0 +1,19 @@
+.c-cart-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FAFAFA;
+  padding: 15px 85px;
+
+  &__title {
+    padding-left: 27px;
+    letter-spacing: 2.76px;
+    font-size: 31px;
+    font-weight: 500;
+  }
+}
+
+.c-cart-box {
+  display: flex;
+  flex-direction: column;
+}
