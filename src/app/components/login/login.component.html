@@ -7,7 +7,7 @@
       <div class="c-modal__content">
         <input class="c-modal__input" type="email" name="email" [(ngModel)]="email" formControlName="email" placeholder="E-mail" required />
         <input class="c-modal__input" type="password" name="password" [(ngModel)]="password" formControlName="password" placeholder="Senha" required />
-        <button class="c-button--modal" (click)="getToVerifyClient()">{{title}}</button>
+        <button class="c-button--modal" (click)="getToVerifyClient()">{{title | uppercase}}</button>
       </div>
       <div class="c-error" *ngIf="error">
         {{error}}
