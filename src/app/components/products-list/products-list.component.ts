@@ -15,6 +15,7 @@ export class ProductsListComponent implements OnInit {
   count: number = 0;
 
   @Output() onIncItem = new EventEmitter<any>();
+  @Output() onDecItem = new EventEmitter<any>();
 
   constructor(
     public productsService: ProductsService,
@@ -36,7 +37,11 @@ export class ProductsListComponent implements OnInit {
 
   IncCart() {
     this.count++;
-    console.log(this.count);
     this.onIncItem.emit(this.count);
+  }
+
+  DecCart() {
+    this.count--;
+    this.onDecItem.emit(this.count);
   }
 }

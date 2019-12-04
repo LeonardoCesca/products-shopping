@@ -7,7 +7,7 @@
       <div class="c-price">
         <span>{{product.price}}</span>
       </div>
-      <app-button-buy (onAddItemToCart)="IncCart()" [childMessage]="message"></app-button-buy>
+      <app-button-buy (onAddItemToCart)="IncCart()" (onDecItemToCart)="DecCart()" [childMessage]="message"></app-button-buy>
     </div>
   </div>
   <div class="c-counter">

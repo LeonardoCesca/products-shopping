@@ -12,6 +12,7 @@ export class ButtonBuyComponent implements OnInit {
 
   @Input() childMessage: string;
   @Output() onAddItemToCart = new EventEmitter<any>();
+  @Output() onDecItemToCart = new EventEmitter<any>();
 
   constructor() { }
 
@@ -25,7 +26,15 @@ export class ButtonBuyComponent implements OnInit {
       this.status = this.toggle ? this.title : "Remove from cart";
       this.title = this.childMessage;
     }
-    this.onAddItemToCart.emit();
+    this.actionAddOrDec();
+  }
+
+  actionAddOrDec() {
+    if(this.toggle === false) {
+      this.onAddItemToCart.emit();
+    } else {
+      this.onDecItemToCart.emit();
+    }
   }
 
 }
