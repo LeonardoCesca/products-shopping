@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-button-buy',
@@ -11,6 +11,7 @@ export class ButtonBuyComponent implements OnInit {
   status: string = 'Add to cart';
 
   @Input() childMessage: string;
+  @Output() onAddItemToCart = new EventEmitter<any>();
 
   constructor() { }
 
@@ -21,9 +22,10 @@ export class ButtonBuyComponent implements OnInit {
     this.toggle = !this.toggle;
 
     if(this.childMessage) {
-      this.title = this.childMessage;
       this.status = this.toggle ? this.title : "Remove from cart";
+      this.title = this.childMessage;
     }
+    this.onAddItemToCart.emit();
   }
 
 }
